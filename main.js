@@ -24,7 +24,7 @@ client.on("messageCreate", async (message) => {
   if (!message.content.startsWith("-seraphin")) return;
   message.content = message.content.replace("-seraphin ", "");
 
-  let prompt = `he thinks he's a seraphin, a higher rank than angel`;
+  let prompt = `he thinks he's a seraphin`;
   prompt += `${message.author.username} : ${message.content}`;
   const res = await openai.createCompletion({
     model: "text-davinci-003",
